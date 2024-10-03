@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title id="tituloSite">Criar História - Histórias Personalizadas para Dormir</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- JavaScript -->
+  <script defer src="js/scripts.js"></script>
+</head>
+<body>
+
+  <!-- Seleção de Idioma -->
+  <div class="language-selector">
+    <label for="seletorIdioma">Idioma / Language:</label>
+    <select id="seletorIdioma">
+      <option value="pt">Português</option>
+      <option value="en">English</option>
+    </select>
+  </div>
+
+  <!-- Cabeçalho -->
+  <header>
+    <div class="container">
+      <img src="images/logo.png" alt="Logo do Site">
+      <nav>
+        <ul>
+          <li><a href="index.html" data-key="menuInicio">Início</a></li>
+          <li><a href="criar.html" data-key="menuCriarHistoria">Criar História</a></li>
+          <li><a href="biblioteca.html" data-key="menuBiblioteca">Minha Biblioteca</a></li>
+          <li><a href="sobre.html" data-key="menuSobre">Sobre</a></li>
+          <li><a href="contato.html" data-key="menuContato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Formulário de Criação -->
+  <section class="form-container">
+    <h2 id="tituloPaginaCriar">Personalize Sua História</h2>
+    <form action="historia.html" method="GET" id="formCriarHistoria">
+      <!-- Seleção do Tema -->
+      <label for="tema" id="labelTema">Escolha o tema da história:</label>
+      <select id="tema" name="tema" required>
+        <option value="" disabled selected id="selecioneTema">Selecione um tema</option>
+        <option value="0" class="temaOption">Aventura</option>
+        <option value="1" class="temaOption">Fantasia</option>
+        <option value="2" class="temaOption">Animais</option>
+        <option value="3" class="temaOption">Amizade</option>
+      </select>
+
+      <!-- Inserção de Nomes -->
+      <label for="protagonista" id="labelProtagonista">Nome do protagonista:</label>
+      <input type="text" id="protagonista" name="protagonista" required>
+
+      <label for="amigo" id="labelAmigo">Nome do amigo(a) do protagonista:</label>
+      <input type="text" id="amigo" name="amigo">
+
+      <!-- Adicionar Parte à História -->
+      <label for="parteExtra" id="labelParteExtra">Adicione uma parte à história (opcional):</label>
+      <textarea id="parteExtra" name="parteExtra" rows="4"></textarea>
+
+      <!-- Escolha do Final -->
+      <div class="radio-group">
+        <p id="labelFinal">Escolha o final da história:</p>
+        <label>
+          <input type="radio" name="final" value="feliz" required>
+          <span id="finalFelizLabel">Final Feliz</span>
+        </label>
+        <label>
+          <input type="radio" name="final" value="triste">
+          <span id="finalTristeLabel">Final Triste</span>
+        </label>
+      </div>
+
+      <!-- Botão Gerar História -->
+      <button type="submit" id="botaoGerar">Gerar História</button>
+    </form>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2023 <span id="tituloRodape">Histórias Personalizadas para Dormir</span></p>
+    <p><a href="mailto:contato@historiasparadormir.com" id="emailContato">contato@historiasparadormir.com</a></p>
+  </footer>
+
+</body>
+</html>
