@@ -1,0 +1,57 @@
+    <!DOCTYPE html>
+    <html lang="pt">
+    <head>
+    <meta charset="UTF-8">
+    <title id="tituloSite">Minha Biblioteca - Histórias Personalizadas para Dormir</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/scripts.js"></script>
+    <!-- Exibição do saldo de moedas -->
+<div id="saldoMoedasDisplay">
+    <span id="textoSaldoMoedas">Saldo de Moedas:</span> <span id="saldoMoedasValor">1000</span>
+    </div>
+    </head>
+    <body>
+
+    <!-- Seleção de Idioma -->
+    <div class="language-selector">
+        <label for="seletorIdioma">Idioma / Language:</label>
+        <select id="seletorIdioma">
+        <option value="pt">Português</option>
+        <option value="en">English</option>
+        </select>
+    </div>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+        <img src="images/logo.png" alt="Logo do Site">
+        <nav>
+            <ul>
+            <li><a href="index.html" data-key="menuInicio">Início</a></li>
+            <li><a href="criar.html" data-key="menuCriarHistoria">Criar História</a></li>
+            <li><a href="biblioteca.html" data-key="menuBiblioteca">Minha Biblioteca</a></li>
+            <li><a href="sobre.html" data-key="menuSobre">Sobre</a></li>
+            <li><a href="contato.html" data-key="menuContato">Contato</a></li>
+            <li><a href="comprar.html" data-key="menuComprarMoedas">Comprar Moedas</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo da Biblioteca -->
+    <section class="library-container">
+        <h2 id="tituloBiblioteca">Minha Biblioteca</h2>
+        <div id="estante" class="bookshelf">
+        <!-- Os livros serão inseridos aqui pelo JavaScript -->
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2027 <span id="tituloRodape">Histórias Personalizadas para Dormir</span></p>
+        <p><a href="mailto:contato@historiasparadormir.com" id="emailContato">contato@historiasparadormir.com</a></p>
+    </footer>
+
+    </body>
+    </html>

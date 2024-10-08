@@ -8,6 +8,11 @@
   <link rel="stylesheet" href="css/styles.css">
   <!-- JavaScript -->
   <script defer src="js/scripts.js"></script>
+  <!-- Exibição do saldo de moedas -->
+<div id="saldoMoedasDisplay">
+  <span id="textoSaldoMoedas">Saldo de Moedas:</span> <span id="saldoMoedasValor">1000</span>
+</div>
+
 </head>
 <body>
 
@@ -31,57 +36,79 @@
           <li><a href="biblioteca.html" data-key="menuBiblioteca">Minha Biblioteca</a></li>
           <li><a href="sobre.html" data-key="menuSobre">Sobre</a></li>
           <li><a href="contato.html" data-key="menuContato">Contato</a></li>
+          <li><a href="comprar.html" data-key="menuComprarMoedas">Comprar Moedas</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Formulário de Criação -->
-  <section class="form-container">
-    <h2 id="tituloPaginaCriar">Personalize Sua História</h2>
-    <form action="historia.html" method="GET" id="formCriarHistoria">
-      <!-- Seleção do Tema -->
-      <label for="tema" id="labelTema">Escolha o tema da história:</label>
-      <select id="tema" name="tema" required>
-        <option value="" disabled selected id="selecioneTema">Selecione um tema</option>
-        <option value="0" class="temaOption">Aventura</option>
-        <option value="1" class="temaOption">Fantasia</option>
-        <option value="2" class="temaOption">Animais</option>
-        <option value="3" class="temaOption">Amizade</option>
-      </select>
+<!-- Formulário de Criação -->
+<section class="form-container">
+  <h2 id="tituloPaginaCriar">Personalize Sua História</h2>
+  <form action="historia.html" method="GET" id="formCriarHistoria">
+    <!-- Seleção do Tamanho da História -->
+    <label for="tamanhoHistoria" id="labelTamanhoHistoria">Qual o tamanho da história?</label>
+    <select id="tamanhoHistoria" name="tamanhoHistoria" required>
+      <option value="" disabled selected id="selecioneTamanho">Selecione o tamanho</option>
+      <option value="pequena">Pequena</option>
+      <option value="media">Média</option>
+      <option value="longa">Longa</option>
+    </select>
 
-      <!-- Inserção de Nomes -->
-      <label for="protagonista" id="labelProtagonista">Nome do protagonista:</label>
-      <input type="text" id="protagonista" name="protagonista" required>
+    <!-- Seleção do Número de Personagens -->
+    <label for="numeroPersonagens" id="labelNumeroPersonagens">Quantos personagens?</label>
+    <select id="numeroPersonagens" name="numeroPersonagens" required>
+      <option value="" disabled selected id="selecionePersonagens">Selecione o número</option>
+      <option value="1">1 Personagem</option>
+      <option value="2">2 Personagens</option>
+      <option value="3">3 Personagens</option>
+    </select>
 
-      <label for="amigo" id="labelAmigo">Nome do amigo(a) do protagonista:</label>
-      <input type="text" id="amigo" name="amigo">
+    <!-- Campos de Nome dos Personagens -->
+    <div id="camposPersonagens">
+      <!-- Os campos de nome dos personagens serão inseridos aqui -->
+    </div>
 
-      <!-- Adicionar Parte à História -->
-      <label for="parteExtra" id="labelParteExtra">Adicione uma parte à história (opcional):</label>
-      <textarea id="parteExtra" name="parteExtra" rows="4"></textarea>
+    <!-- Campo para adicionar uma parte extra à história -->
+<label for="parteExtra" id="labelParteExtra">Adicione uma parte à história (opcional):</label>
+<textarea id="parteExtra" name="parteExtra" rows="4" cols="50"></textarea>
 
-      <!-- Escolha do Final -->
-      <div class="radio-group">
-        <p id="labelFinal">Escolha o final da história:</p>
-        <label>
-          <input type="radio" name="final" value="feliz" required>
-          <span id="finalFelizLabel">Final Feliz</span>
-        </label>
-        <label>
-          <input type="radio" name="final" value="triste">
-          <span id="finalTristeLabel">Final Triste</span>
-        </label>
-      </div>
+    <!-- Seleção da Categoria da História -->
+    <label for="categoriaHistoria" id="labelCategoriaHistoria">Qual a categoria da história?</label>
+    <select id="categoriaHistoria" name="categoriaHistoria" required>
+      <option value="" disabled selected id="selecioneCategoria">Selecione a categoria</option>
+      <option value="aventura">Aventura</option>
+      <option value="romance">Romance</option>
+      <option value="suspense">Suspense</option>
+      <option value="assustadora">Assustadora</option>
+      <!-- Adicione mais categorias conforme desejar -->
+    </select>
 
-      <!-- Botão Gerar História -->
-      <button type="submit" id="botaoGerar">Gerar História</button>
-    </form>
-  </section>
+    <!-- Escolha do Final -->
+    <label for="tipoFinal" id="labelTipoFinal">Qual será o final?</label>
+    <select id="tipoFinal" name="tipoFinal" required>
+      <option value="" disabled selected id="selecioneFinal">Selecione o final</option>
+      <option value="feliz">Feliz</option>
+      <option value="triste">Triste</option>
+      <option value="randomizado">Randomizado</option>
+    </select>
+
+    <!-- Opção para Moral ou Valor Educativo -->
+    <div class="checkbox-group">
+      <label>
+        <input type="checkbox" id="incluirMoral" name="incluirMoral">
+        <span id="labelIncluirMoral">Incluir moral ou valor educativo</span>
+      </label>
+    </div>
+
+    <!-- Botão Gerar História -->
+    <button type="submit" id="botaoGerar">Gerar História</button>
+  </form>
+</section>
 
   <!-- Rodapé -->
   <footer>
-    <p>&copy; 2023 <span id="tituloRodape">Histórias Personalizadas para Dormir</span></p>
+    <p>&copy; 2072 <span id="tituloRodape">Histórias Personalizadas para Dormir</span></p>
     <p><a href="mailto:contato@historiasparadormir.com" id="emailContato">contato@historiasparadormir.com</a></p>
   </footer>
 
